@@ -27,5 +27,5 @@ jobs:
       run: scp -i ssh-key.pem -o StrictHostKeyChecking=no index.html ubuntu@13.233.212.49:./
 
     - name: SSH to server
-      run: ssh -i ssh-key.pem -o StrictHostKeyChecking=no ubuntu@13.233.212.49 "sudo cp index.html /var/www/html"
+      run: ssh -i ssh-key.pem -o StrictHostKeyChecking=no ubuntu@13.233.212.49 "sudo cp index.html /var/www/html/wordpress"
 
