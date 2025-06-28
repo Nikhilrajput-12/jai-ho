@@ -19,4 +19,10 @@ jobs:
     - name: Checking secret
       env:
         SSH_KEY: ${{ secrets.SSH_KEY }}
-      run: echo $SSH_KEY
+      run: |
+        echo $SSH_KEY >> ssh-key.pem
+        chmod 400 ssh-key.pem
+
+    - name: SSH to server
+      run: ssh -i ssh-key.pem -o StrictHostKeyChecking=no ubuntu@13.233.212.49 "sudo ls -lah /var/www/html"
+
