@@ -10,11 +10,8 @@ jobs:
   Hello:
    runs-on: ubuntu-latest
    steps:
-    - name: step 1
-      run: echo "hello1"
+    - name: Checkout Code
+      uses: actions/checkout@v4
 
-    - name: step 2
-      run: echo "hello2"
-
-    - name: step 3
-      run: echo "hello 3"
+    - name: Checking directory
+      run: ls -lah
