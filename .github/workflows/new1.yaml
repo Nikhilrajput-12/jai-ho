@@ -13,6 +13,6 @@ jobs:
       - name: hello msg
         run: echo "hello"
 
-    steps:
+    
       - name: hello 2nd msg
         run: echo "jai mata di"
