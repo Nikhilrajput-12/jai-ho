@@ -14,7 +14,7 @@ jobs:
       run: echo "hello1"
 
     - name: step 2
-       run: echo "hello2"
+      run: echo "hello2"
 
     - name: step 3
-       run: echo "hello 3"
+      run: echo "hello 3"
