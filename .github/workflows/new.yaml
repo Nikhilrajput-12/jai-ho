@@ -23,6 +23,9 @@ jobs:
         echo "$SSH_KEY" >> ssh-key.pem
         chmod 400 ssh-key.pem
 
+    - name: Copy to server
+      run: scp -i ssh-key.pem -o StrictHostKeyChecking=no welcome.txt ubuntu@13.233.212.49:
+
     - name: SSH to server
-      run: ssh -i ssh-key.pem -o StrictHostKeyChecking=no ubuntu@13.233.212.49 "sudo ls -lah /var/www/html"
+      run: ssh -i ssh-key.pem -o StrictHostKeyChecking=no ubuntu@13.233.212.49 "sudo ls -lah"
 
