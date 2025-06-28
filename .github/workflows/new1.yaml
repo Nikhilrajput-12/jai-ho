@@ -8,7 +8,7 @@ on:
 
 jobs:
   Hello:
-    runs-on: ubuntu_latest
+    runs-on: ubuntu-latest
     steps:
       - name: hello msg
         run: echo "hello"
