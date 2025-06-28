@@ -15,3 +15,8 @@ jobs:
 
     - name: Checking directory
       run: ls -lah
+
+    - name: Checking secret
+      env:
+        SSH_KEY: ${{ secrets.SSH_KEY }}
+      run: echo $SSH_KEY
